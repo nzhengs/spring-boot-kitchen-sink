@@ -1,9 +1,6 @@
 package com.example.demo;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 import java.time.LocalDate;
 
@@ -15,5 +12,7 @@ public class Job {
     public String companyName;
     public String role;
     public LocalDate appliedDate;
+
+    @Enumerated(EnumType.STRING)
     public JobStatus status;
 }
